@@ -47,7 +47,13 @@ Route::prefix('admin')->group(function () {
 
         // Event
         Route::resource('/event', App\Http\Controllers\Admin\EventController::class, ['except' => ['show'], 'as' => 'admin']);
+
+        //Photo
+        Route::resource('/photo', App\Http\Controllers\Admin\PhotoController::class, ['except' => ['show', 'create', 'edit', 'update'], 'as' => 'admin']);
     });
+
+    // Video
+    Route::resource("/video", App\Http\Controllers\Admin\VideoController::class, ['except' => 'show', 'as'  => 'admin']);
 });
 
 Route::get('/test', function () {

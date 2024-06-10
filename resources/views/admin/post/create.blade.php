@@ -19,7 +19,8 @@
 
                             <div class="form-group">
                                 <label>Gambar</label>
-                                <input type="file" name="image" class="form-control @error('image') is-invalid @enderror">
+                                <input type="file" name="image"
+                                    class="form-control @error('image') is-invalid @enderror">
 
                                 @error('image')
                                     <div class="invalid-feedback" style="display: block;">
@@ -30,7 +31,9 @@
 
                             <div class="form-group">
                                 <label>Judul Berita</label>
-                                <input type="text" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Berita" class="form-control @error('title') is-invalid @enderror">
+                                <input type="text" name="title" value="{{ old('title') }}"
+                                    placeholder="Masukkan Judul Berita"
+                                    class="form-control @error('title') is-invalid @enderror">
 
                                 @error('title')
                                     <div class="invalid-feedback" style="display: block;">
@@ -57,7 +60,8 @@
 
                             <div class="form-group">
                                 <label>Konten</label>
-                                <textarea class="form-control content @error('content') is-invalid @enderror" name="content" rows="10" placeholder="Masukkan Konten / Isi Berita">{!! old('content') !!}</textarea>
+                                <textarea class="form-control content @error('content') is-invalid @enderror" name="content" rows="10"
+                                    placeholder="Masukkan Konten / Isi Berita">{!! old('content') !!}</textarea>
                                 @error('content')
                                     <div class="invalid-feedback" style="display: block;">
                                         {{ $message }}
@@ -75,7 +79,8 @@
                                 </select>
                             </div>
 
-                            <button type="submit" class="btn btn-primary mr-1 btn-submit"><i class="fa fa-paper-plane"></i> Simpan</button>
+                            <button type="submit" class="btn btn-primary mr-1 btn-submit"><i class="fa fa-paper-plane"></i>
+                                Simpan</button>
                             <button type="reset" class="btn btn-danger"><i class="fa fa-redo"></i> Reset</button>
                         </form>
                     </div>
